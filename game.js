@@ -1,15 +1,16 @@
 $("h1");
+var buttonCollors = ["red", "green", "blue", "yellow"];
+
 var gamePattern = [];
 function nextSequence() {
-    var randomNumber = Math.floor(Math.random() * 4);
-    return randomNumber;
+  var randomNumber = Math.floor(Math.random() * 4);
+  var randomChosenColour = buttonCollors[randomNumber];
+  gamePattern.push(randomChosenColour);
+  $("#" + randomChosenColour)
+    .fadeOut(100)
+    .fadeIn(100)
+    .fadeOut(100)
+    .fadeIn(0);
 }
 
-var buttonCollors = ["red", "green", "blue", "yellow"];
-var randomChosenColour = buttonCollors[nextSequence()];
-
-gamePattern.push(randomChosenColour);
-console.log(randomChosenColour)
-
-
-$("#" + randomChosenColour).fadeOut(100).fadeIn(100);
+nextSequence();
