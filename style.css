@@ -2,6 +2,7 @@ body {
     background-color: #011F3F;
     text-align: center;
     margin: auto;
+    height: 350px;
 }
 
 #level-title {
@@ -60,30 +61,5 @@ body {
 }
 
 
-.play-btn {
-    background-color: rgb(25, 25, 25);
-    border-radius: 100%;
-    box-shadow: 0 0 50px;
-    height: 180px;
-    width: 180px;
-    position: fixed;
-    display: block;
-    top: 0;
-    right: 0;
-    bottom: -96px;
-    left: 0;
-    margin: auto;
-    text-align: center;
-    z-index: 40;
-    
-}
 
 
-p {
-    color: white;
-    font-family: Verdana;
-    font-size: 35px;
-    font-weight: 650;
-    
-  
-}
