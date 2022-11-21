@@ -13,4 +13,11 @@ function nextSequence() {
     .fadeIn(0);
 }
 
+function playSound() {
+  var audio = new Audio("/sounds/" + randomChosenColour + ".mp3");
+  audio.play();
+}
+
+var audio = new Audio("sounds/green.mp3");
+audio.play();
 nextSequence();
