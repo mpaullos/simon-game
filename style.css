@@ -3,6 +3,13 @@ body {
   text-align: center;
   margin: auto;
   height: 450px;
+
+
+  /* remover cor azul em duplo clique */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #level-title {
