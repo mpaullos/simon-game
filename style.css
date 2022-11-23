@@ -41,24 +41,40 @@ body {
   margin-top: 30px;
 }
 
-#green {
+.green {
   background-color: green;
+}
+
+
+#green {
   border-radius: 100% 3% 3% 3%;
   margin: 0px;
 }
+
+
+.red {
+  background-color: #EB6769;
+  border-color: #EB6769;
+}
+
 #red {
-  background-color: red;
   border-radius: 3% 100% 3% 3%;
 }
 
-#yellow {
+.yellow {
   background-color: yellow;
+}
+
+#yellow {
   border-radius: 3% 3% 3% 100%;
   margin-left: 0;
 }
 
-#blue {
+.blue {
   background-color: blue;
+}
+
+#blue {
   border-radius: 3% 3% 100% 3%;
 }
 
@@ -67,11 +83,11 @@ body {
   background-color: grey;
 }
 
-/* .btn :hover {
+.btn :hover {
   box-shadow: 0 0 0 black;
-} */
+}
 
-/* #green:active,
+#green:active,
 #red:active,
 #yellow:active,
 #blue:active {
@@ -87,4 +103,4 @@ body {
 .hover {
   box-shadow: 0 0 30px #97afa2;
   border: 1px solid #979caf;
-} */
+}
