@@ -9,6 +9,7 @@ $(".btn").click(function () {
   userClickedPattern.push(userChosenColor);
   console.log(userClickedPattern);
   playSound(userChosenColor);
+  animatePress(userChosenColor)
 });
 
 function nextSequence() {
@@ -29,5 +30,11 @@ function playSound(name) {
   audio.play();
 }
 
+function animatePress(currentColor) {
+  $("#" + currentColor).addClass("pressed");
+  setTimeout(function () {
+    $("#" + currentColor).removeClass("pressed");
+  }, 100);
+}
+
 nextSequence();
-handler();
