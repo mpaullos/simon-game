@@ -4,7 +4,6 @@ body {
   margin: auto;
   height: 450px;
 
-
   /* remover cor azul em duplo clique */
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -22,7 +21,7 @@ body {
 
 .container {
   border-radius: 90%;
-  background-color: black;
+  background-color: none;
   width: 500px;
   height: 500px;
   margin: auto;
@@ -45,16 +44,13 @@ body {
   background-color: green;
 }
 
-
 #green {
   border-radius: 100% 3% 3% 3%;
   margin: 0px;
 }
 
-
 .red {
-  background-color: #EB6769;
-  border-color: #EB6769;
+  background-color: red;
 }
 
 #red {
@@ -103,4 +99,18 @@ body {
 .hover {
   box-shadow: 0 0 30px #97afa2;
   border: 1px solid #979caf;
+}
+
+
+.transparente {
+  background-color: #011f3f;
+  width: 200px;
+  height: 200px;
+  position:relative;
+  text-align:center;
+  border-radius: 50%;
+  float:inline-end;
+  margin-bottom: -116px;
+  margin-left: 150px;
+  margin-top: -100px;
 }
