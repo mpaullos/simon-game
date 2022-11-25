@@ -4,8 +4,10 @@ var buttonCollors = ["red", "green", "blue", "yellow"];
 var gamePattern = [];
 
 var userClickedPattern = [];
+
 var level = 0;
 
+/* Salvar as opções do usuário */
 $(".btn").click(function () {
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
@@ -14,6 +16,8 @@ $(".btn").click(function () {
   checkAnswer(userClickedPattern.length - 1);
 });
 
+
+/* Iniciar o jogo */
 $("body").keypress(function (event) {
   if (event.key.toLowerCase() == "a") {
     $("#level-title").text("Level " + level);
@@ -21,6 +25,7 @@ $("body").keypress(function (event) {
   }
 });
 
+/* Criar de forma aleatória a proxima cor, e atribuir som e animação aos botões */
 function nextSequence() {
   level++;
   $("#level-title").text("Level " + level);
@@ -38,11 +43,14 @@ function nextSequence() {
   audio.play();
 }
 
+
+/* tocar música especifica ao clicar em um botão */
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
 }
 
+/* add animação e remove */
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed");
   setTimeout(function () {
@@ -50,6 +58,8 @@ function animatePress(currentColor) {
   }, 100);
 }
 
+
+/* Lógica do jogo */
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
     console.log("Sucess");
