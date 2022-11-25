@@ -7,6 +7,11 @@ var userClickedPattern = [];
 
 var level = 0;
 
+$("#reset").click(function () {
+  gamePattern = [];
+  nextSequence();
+});
+
 /* Salvar as opções do usuário */
 $(".btn").click(function () {
   var userChosenColour = $(this).attr("id");
@@ -16,13 +21,11 @@ $(".btn").click(function () {
   checkAnswer(userClickedPattern.length - 1);
 });
 
-
 /* Iniciar o jogo */
-$("body").keypress(function (event) {
-  if (event.key.toLowerCase() == "a") {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-  }
+$("#start").click(function () {
+  $("#level-title").text("Level " + level);
+  nextSequence();
+  console.log("foi");
 });
 
 /* Criar de forma aleatória a proxima cor, e atribuir som e animação aos botões */
@@ -43,7 +46,6 @@ function nextSequence() {
   audio.play();
 }
 
-
 /* tocar música especifica ao clicar em um botão */
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
@@ -58,7 +60,6 @@ function animatePress(currentColor) {
   }, 100);
 }
 
-
 /* Lógica do jogo */
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
@@ -69,6 +70,11 @@ function checkAnswer(currentLevel) {
       }, 1000);
     }
   } else {
-    $("#level-title").text("Parabéns, o seu recorde é " + level + "!");
+    $("body").addClass("game-over");
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 2000);
+    $("#level-title").text("Game Over, o seu recorde foi " + level + "!");
+    level = 0;
   }
 }

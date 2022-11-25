@@ -16,7 +16,7 @@ body {
   color: rgb(255, 255, 255);
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -114,4 +114,20 @@ body {
   margin-bottom: -116px;
   margin-left: 150px;
   margin-top: -316px;
+}
+
+.game-over {
+  background-color: darkred;
+  opacity: 0.8;
+}
+
+
+.menu button{
+  background-color: rgb(56, 56, 53);
+  color: white;
+  width: 86px;
+  height: 40px;
+  border-radius: 28px;
+  font-size: 20px;
+  margin: 0 2px 0 2px;
 }
