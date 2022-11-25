@@ -7,8 +7,11 @@ var userClickedPattern = [];
 
 var level = 0;
 
+var started = false;
+
 $("#reset").click(function () {
   gamePattern = [];
+  level = 0;
   nextSequence();
 });
 
@@ -23,9 +26,11 @@ $(".btn").click(function () {
 
 /* Iniciar o jogo */
 $("#start").click(function () {
-  $("#level-title").text("Level " + level);
-  nextSequence();
-  console.log("foi");
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
 });
 
 /* Criar de forma aleatória a proxima cor, e atribuir som e animação aos botões */
@@ -76,5 +81,6 @@ function checkAnswer(currentLevel) {
     }, 2000);
     $("#level-title").text("Game Over, o seu recorde foi " + level + "!");
     level = 0;
+    started = false;
   }
 }
