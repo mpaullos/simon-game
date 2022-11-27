@@ -12,7 +12,10 @@ var started = false;
 $("#reset").click(function () {
   gamePattern = [];
   level = 0;
-  nextSequence();
+  $("#level-title").text("Simon Game");
+  setTimeout(function () {
+    nextSequence();
+  }, 1000);
 });
 
 /* Salvar as opções do usuário */
