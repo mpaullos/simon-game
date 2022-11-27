@@ -79,10 +79,12 @@ function checkAnswer(currentLevel) {
     }
   } else {
     $("body").addClass("game-over");
+    $(".transparente").css("backgroundColor", "darkred");
     var audio = new Audio("/sounds/wrong.mp3");
     audio.play();
     setTimeout(function () {
       $("body").removeClass("game-over");
+      $(".transparente").css("backgroundColor", "#011f3f");
     }, 2000);
     $("#level-title").text("Game Over, o seu recorde foi " + level + "!");
     level = 0;
