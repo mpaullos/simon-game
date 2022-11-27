@@ -31,6 +31,7 @@ $(".btn").click(function () {
 $("#start").click(function () {
   if (!started) {
     $("#level-title").text("Level " + level);
+    gamePattern = [];
     nextSequence();
     started = true;
   }
