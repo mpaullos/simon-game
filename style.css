@@ -13,7 +13,7 @@ body {
 
 #level-title {
   font-family: "Press Start 2P", cursive;
-  color: #FEF2BF;
+  color: #fef2bf;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -102,15 +102,14 @@ body {
   border: 1px solid #979caf;
 }
 
-
 .transparente {
   background-color: #011f3f;
   width: 200px;
   height: 200px;
-  position:relative;
-  text-align:center;
+  position: relative;
+  text-align: center;
   border-radius: 50%;
-  float:inline-end;
+  float: inline-end;
   margin-bottom: -116px;
   margin-left: 150px;
   margin-top: -316px;
@@ -121,8 +120,7 @@ body {
   opacity: 0.8;
 }
 
-
-.menu button{
+.menu button {
   background-color: rgb(56, 56, 53);
   color: white;
   width: 86px;
@@ -130,4 +128,62 @@ body {
   border-radius: 28px;
   font-size: 20px;
   margin: 0 2px 0 2px;
+}
+
+#reset,
+#start {
+  border-color: grey;
+  border-style: double;
+  margin-top: 1px;
+  margin-bottom: 5px;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  body {
+    text-align: center;
+    position: initial;
+  }
+
+  #level-title {
+    font-size: 18px;
+    margin: 20px;
+  }
+
+  #red {
+    border-radius: 3% 100% 3% 3%;
+  }
+
+  .btn {
+    height: 128px;
+    width: 128px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .transparente {
+    background-color: #011f3f;
+    width: 128px;
+    height: 128px;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    float: inline-end;
+    margin-bottom: -116px;
+    margin-left: 184px;
+    margin-top: -203px;
+  }
+
+  .container {
+    margin: 0 -2.5rem;
+    position: fixed;
+  }
+
+  .menu button {
+    font-size: 20px;
+    margin: -2px -3px -5px 12px;
+  }
 }
