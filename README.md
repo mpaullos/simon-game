@@ -39,7 +39,7 @@ Para conquistar pontos no jogo Simon, os jogadores precisam se lembrar da sequê
 
 ## :white_check_mark: Requerimentos ##
 
-É necessário que o usuário possua conexão com a internet. Ou faça o download do projeto para poder executar de forma offline;
+É necessário que o usuário possua conexão com a internet. Ou faça o [download](https://github.com/mpaullos/simon-game/archive/refs/heads/main.zip) extraia e executa o index.html.
 
 ## :video_game: [Simon Game](https://simon-game-bice.vercel.app/) :point_left: ##
 
